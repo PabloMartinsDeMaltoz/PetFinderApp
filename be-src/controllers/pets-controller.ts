@@ -49,7 +49,7 @@ export async function getLostPet( id:string) {
   return lostPet 
 }
 // Aca tenemos que asegurarnos de recibir el id de la mascota a editar , foto o datos de la misma
-export async function editLostPet(id:number,name:string,last_location_lat:number,last_location_lng:number, picture:string,public_id:string,petId) {
+export async function editLostPet(id:number,name:string,last_location_lat:number,last_location_lng:number, picture:string,public_id:string,petId:number) {
   //modificar la foto existente
   const newPicture= await updatePhoto(picture,public_id)
   const [user, created] = await Pets.findOrCreate({

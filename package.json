@@ -2,7 +2,7 @@
   "name": "07-DesafioPetFinder",
   "version": "1.0.0",
   "main": "index.js",
-  "type": "commonjs",
+ 
   "license": "MIT",
   "dependencies": {
     "algoliasearch": "^4.22.1",
@@ -29,6 +29,7 @@
   },
   "scripts": {
     "dev:backend": "yarn nodemon --watch ./ --exec ts-node ./view.ts",
+    "build:backend":"yarn tsc ./view.ts",
     "sync": "yarn ts-node ./be-src/sync.ts",
     "al": "yarn ts-node ./be-src/libs/algolia.ts",
     "dev:front": "parcel ./fe-src/index.html",

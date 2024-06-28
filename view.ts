@@ -1,5 +1,5 @@
-import express from "express";
-import cors from "cors";
+import * as express from "express";
+import * as cors from "cors";
 import { sequelize } from "./be-src/index";
 import {
   setUser,
@@ -11,9 +11,9 @@ import {
   setEmailAndHash,
   updatePassword,
 } from "./be-src/controllers/auth-controller";
-import { authMiddleware } from "./be-src/utils/authmidleware";
-import bodyParser from "body-parser";
-import path from "node:path";
+import { authMiddleware } from "./be-src/utils/index";
+import * as  bodyParser from "body-parser";
+import * as path from "node:path";
 import { addReport, editLostPet, getLostPet, } from "./be-src/controllers/pets-controller";
 import { arroundLoc } from "./be-src/libs/algolia";
 

@@ -1,5 +1,5 @@
 import jwt from "jsonwebtoken";
-import crypto from "crypto";
+import * as crypto from "crypto";
 import { Auth } from "../models/auth";
 
 export async function setEmailAndHash(email: string, password: string) {

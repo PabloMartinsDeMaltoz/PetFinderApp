@@ -1,8 +1,8 @@
 {
   "compilerOptions": {
-    "module": "NodeNext",
-    "target": "ESNext",
-    "moduleResolution": "NodeNext"
-  },
-  "exclude": ["node_modules"]
+    "module": "CommonJS",
+    "target": "ESNext",yarn
+    "allowSyntheticDefaultImports": true,
+    },
+    
 }
