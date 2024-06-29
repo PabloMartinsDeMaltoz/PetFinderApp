@@ -4,6 +4,7 @@
   "main": "view.js",
   "license": "MIT",
   "dependencies": {
+    "@types/cors": "^2.8.17",
     "@types/node": "^20.14.9",
     "algoliasearch": "^4.22.1",
     "cloudinary": "^2.1.0",

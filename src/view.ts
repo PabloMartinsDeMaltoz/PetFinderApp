@@ -1,5 +1,5 @@
 import * as express from "express";
-import {cors} from "cors";
+import * as cors from "cors";
 import { sequelize } from "./be-src/index";
 import {
   setUser,
