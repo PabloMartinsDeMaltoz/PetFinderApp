@@ -4,3 +4,4 @@ dist
 package-lock.json
 TARJETA.jpg
 yarn.lock
+.env
