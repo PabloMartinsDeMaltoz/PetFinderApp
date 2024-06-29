@@ -1,4 +1,4 @@
-import jwt from "jsonwebtoken";
+import * as jwt from "jsonwebtoken";
 import * as crypto from "crypto";
 import { Auth } from "../models/auth";
 
