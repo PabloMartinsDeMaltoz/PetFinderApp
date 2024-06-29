@@ -1,31 +1,32 @@
 import * as express from "express";
 import * as cors from "cors";
-import { sequelize } from "./be-src/index";
+import { sequelize } from "./src/be-src/index";
 import {
   setUser,
   getUser,
   updateUser,
-} from "./be-src/controllers/user-controller";
+} from "./src/be-src/controllers/user-controller";
 import {
   getToken,
   setEmailAndHash,
   updatePassword,
-} from "./be-src/controllers/auth-controller";
-import { authMiddleware } from "./be-src/utils/index";
+} from "./src/be-src/controllers/auth-controller";
+import { authMiddleware } from "./src/be-src/utils/index";
 import * as  bodyParser from "body-parser";
 import * as path from "node:path";
-import { addReport, editLostPet, getLostPet, } from "./be-src/controllers/pets-controller";
-import { arroundLoc } from "./be-src/libs/algolia";
+import { addReport, editLostPet, getLostPet, } from "./src/be-src/controllers/pets-controller";
+import { arroundLoc } from "./src/be-src/libs/algolia";
 
 //sequelize.sync({ force: true });
 const app = express();
-const port = 3000;
-const ruta = path.resolve(__dirname + "/fe-src");
+const port = process.env.PORT || 3000;
+
+const ruta= path.resolve(__dirname, "./dist", "index.html")
 console.log(ruta);
 
 app.use(cors());
 app.use(bodyParser.json({limit: '50mb'}));
-
+app.use(express.static("dist"));
 /*
 app.get("/", async (req, res) => {
   res.send("Hello World!");
@@ -138,7 +139,6 @@ app.listen(port, () => {
   console.log(`Example app listening on ports ${port}`);
 });
 
-app.use(express.static(ruta));
 
 app.get("*", (req, res) => {
   console.log(ruta );

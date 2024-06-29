@@ -1,7 +1,7 @@
 {
   "compilerOptions": {
     "module": "CommonJS",
-    "target": "ESNext",yarn
+    "target": "ESNext",
     "allowSyntheticDefaultImports": true,
     },
     
