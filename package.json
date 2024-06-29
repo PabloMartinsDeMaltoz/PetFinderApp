@@ -28,12 +28,12 @@
     "typescript": "^5.3.3"
   },
   "scripts": {
-    "build:backend":"yarn tsc ./view.ts",
+    "build:backend":"yarn tsc ./src/view.ts",
     "build:front":"yarn parcel build ./src/fe-src/index.html",
-    "dev:backend": "yarn nodemon --watch ./ --exec ts-node ./view.ts",
+    "dev:backend": "yarn nodemon --watch ./ --exec ts-node ./src/view.ts",
     "dev:front": "yarn parcel serve ./src/fe-src/index.html",
     "build": "yarn build:backend && yarn build:front ",
-    "start":"yarn node view.js",
+    "start":"yarn node ./src/view.js",
     "dev": "yarn concurrently \"yarn dev:front\" \"yarn dev:backend\"",
     "sync": "yarn ts-node ./src/be-src/sync.ts",
     "al": "yarn ts-node ./src/be-src/libs/algolia.ts"

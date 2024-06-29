@@ -1,21 +1,21 @@
 import * as express from "express";
 import * as cors from "cors";
-import { sequelize } from "./src/be-src/index";
+import { sequelize } from "./be-src/index";
 import {
   setUser,
   getUser,
   updateUser,
-} from "./src/be-src/controllers/user-controller";
+} from "./be-src/controllers/user-controller";
 import {
   getToken,
   setEmailAndHash,
   updatePassword,
-} from "./src/be-src/controllers/auth-controller";
-import { authMiddleware } from "./src/be-src/utils/index";
+} from "./be-src/controllers/auth-controller";
+import { authMiddleware } from "./be-src/utils/index";
 import * as  bodyParser from "body-parser";
 import * as path from "node:path";
-import { addReport, editLostPet, getLostPet, } from "./src/be-src/controllers/pets-controller";
-import { arroundLoc } from "./src/be-src/libs/algolia";
+import { addReport, editLostPet, getLostPet, } from "./be-src/controllers/pets-controller";
+import { arroundLoc } from "./be-src/libs/algolia";
 
 //sequelize.sync({ force: true });
 const app = express();
