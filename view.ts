@@ -1,5 +1,5 @@
 import * as express from "express";
-import * as cors from "cors";
+import  * as cors from "cors";
 import { sequelize } from "./src/be-src/index";
 import {
   setUser,
@@ -21,12 +21,12 @@ import { arroundLoc } from "./src/be-src/libs/algolia";
 const app = express();
 const port = process.env.PORT || 3000;
 
+app.use(express.static("dist"));
 const ruta= path.resolve(__dirname, "./dist", "index.html")
 console.log(ruta);
 
 app.use(cors());
-app.use(bodyParser.json({limit: '50mb'}));
-app.use(express.static("dist"));
+app.use(bodyParser.json());
 /*
 app.get("/", async (req, res) => {
   res.send("Hello World!");
@@ -40,6 +40,7 @@ app.get("/", async (req, res) => {
 */
 //Este endpoint da de alta el email en la base de datos y crea un hash
 app.post("/auth", async (req, res) => {
+  console.log(req.body.password)
   const { password, email } = req.body;
   const auth = await setEmailAndHash(email, password);
   res.status(200).json({ auth });

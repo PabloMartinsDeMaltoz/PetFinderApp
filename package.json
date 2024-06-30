@@ -1,10 +1,12 @@
 {
   "name": "07-DesafioPetFinder",
   "version": "1.0.0",
-  "main": "index.js",
- 
   "license": "MIT",
   "dependencies": {
+    "@types/cors": "^2.8.17",
+    "@types/jsonwebtoken": "^9.0.6",
+    "@types/node": "^20.14.9",
+    "@types/sequelize": "^4.28.20",
     "algoliasearch": "^4.22.1",
     "cloudinary": "^2.1.0",
     "cors": "^2.8.5",
@@ -25,15 +27,15 @@
     "nodemon": "^3.1.0",
     "parcel-bundler": "^1.12.5",
     "ts-node": "^10.9.2",
-    "typescript": "^5.3.3"
+    "typescript": "^@types/node"
   },
   "scripts": {
-    "build:backend":"yarn tsc ./view.ts",
-    "build:front":"yarn parcel build ./src/fe-src/index.html",
+    "build:backend": "npx tsc ",
+    "build:front": "yarn parcel build ./src/fe-src/index.html",
     "dev:backend": "yarn nodemon --watch ./ --exec ts-node ./view.ts",
     "dev:front": "yarn parcel serve ./src/fe-src/index.html",
     "build": "yarn build:backend && yarn build:front ",
-    "start":"yarn node view.js",
+    "start": "yarn node ./dist/view.js",
     "dev": "yarn concurrently \"yarn dev:front\" \"yarn dev:backend\"",
     "sync": "yarn ts-node ./src/be-src/sync.ts",
     "al": "yarn ts-node ./src/be-src/libs/algolia.ts"

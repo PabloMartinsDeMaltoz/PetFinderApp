@@ -1,9 +1,11 @@
-import jwt from "jsonwebtoken";
+import * as jwt from "jsonwebtoken";
 import * as crypto from "crypto";
-import { Auth } from "../models/auth";
-
+import  {Auth}  from "../models/auth";
+import { log } from "console";
+import "dotenv/config";
 export async function setEmailAndHash(email: string, password: string) {
   var hash = crypto.createHash("sha1").update(password, "utf-8").digest("hex");
+  console.log(hash)
   try {
     const [user, created] = await Auth.findOrCreate({
       where: { email, hash },

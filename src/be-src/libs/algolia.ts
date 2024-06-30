@@ -21,7 +21,7 @@ export async function addLostPet(id:number,lat:number,lng:number,name:string) {
   }
 }
 
-export async function arroundLoc (location){
+export async function arroundLoc (location:string){
   try {
     
     const reports = await client.initIndex("reports");

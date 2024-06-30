@@ -1,8 +1,16 @@
 {
   "compilerOptions": {
-    "module": "CommonJS",
-    "target": "ESNext",
-    "allowSyntheticDefaultImports": true,
-    },
-    
+    "target": "ES6",                     // Asegúrate de que el objetivo sea ES6 o superior
+    "module":"CommonJS",                // Utiliza CommonJS para compatibilidad con Node.js
+    "outDir": "./dist",                  // Directorio de salida
+    "rootDir": "./",                  // Directorio raíz de los archivos fuente
+    "moduleResolution": "Node"
+   //  "strict": true,                      // Activa todas las comprobaciones estrictas
+   // "esModuleInterop": true,             // Habilita la interoperabilidad de módulos ES (NO)
+    //"skipLibCheck": true,                // Omite la comprobación de tipos en archivos de declaración
+    //"forceConsistentCasingInFileNames": true, // Fuerza la consistencia de mayúsculas y minúsculas en los nombres de archivos
+   // "allowSyntheticDefaultImports":true
+  },
+  //"include": ["./view.ts"],            
+ // "exclude": ["node_modules"]            // Excluir el directorio node_modules
 }

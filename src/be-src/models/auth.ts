@@ -20,3 +20,12 @@ Auth.init(
     modelName: "Auth", // We need to choose the model name
   }
 );
+
+
+/*
+export const Auth = sequelize.define("auth", {
+  email: DataTypes.STRING,
+  password: DataTypes.STRING,
+  userId: DataTypes.INTEGER,
+});
+*/

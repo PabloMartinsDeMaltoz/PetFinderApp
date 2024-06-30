@@ -35,7 +35,7 @@ cloudinary.config({ cloud_name: process.env.C_N,
     cloudinary.api.delete_derived_resources([id,version])
   }
   
- export async function getPhoto (public_id){
+ export async function getPhoto (public_id:string){
           const options = {
             colors: true,
           };
@@ -51,7 +51,7 @@ cloudinary.config({ cloud_name: process.env.C_N,
       }
 
 
-  export async function updatePhoto(img,public_id){
+  export async function updatePhoto(img:string,public_id:string){
  //   const path = 'ruta/a/tu/nueva/imagen.jpg'; // Ruta a la nueva imagen
   //  const publicId = 'public_id_existente'; // El public_id de la imagen que quieres reemplazar
 
